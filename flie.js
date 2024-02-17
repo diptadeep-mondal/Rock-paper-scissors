@@ -1,4 +1,4 @@
-const matchScore=JSON.parse(localStorage.getItem('matchScore'));
+let matchScore=JSON.parse(localStorage.getItem('matchScore'));
 if(!matchScore){
     matchScore={
         win:0,
@@ -7,26 +7,22 @@ if(!matchScore){
     }
 }
        
+
+
+
 let ans;
-function computerMove()
-{
-    const user=Math.random();
-   if(user<=0.3)
-   {
-    ans='rock';
-   }
-   else if(user>0.3 && user<=0.7){
-    ans='paper';
-   }
-   else{
-    ans='scissors';
-   }
-}
-
-
-
 function playGame(userMove){
-computerMove();
+    const user=Math.random();
+    if(user<=0.3)
+    {
+     ans='rock';
+    }
+    else if(user>0.3 && user<=0.7){
+     ans='paper';
+    }
+    else{
+     ans='scissors';
+    }
 let result;
    if(userMove==='rock'){
 
