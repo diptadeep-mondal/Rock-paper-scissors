@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div>
+        <p>Hi am Goofy. Can you beat me in rock,Paper,Scissors.</p>
+        <button class="but" onclick="
+           playGame('rock');
+        "><img class="emoji" src="imgforgame/rock-emoji.png" alt=""></button>
+        <button class="but"  onclick="
+             playGame('paper');
+        "><img class="emoji" src="imgforgame/paper-emoji.png" alt=""></button>
+        <button class="but"  onclick="
+        playGame('scissors');
+        "><img class="emoji" src="imgforgame/scissors-emoji.png" alt=""></button>
+        
+        
+    </div>
+    <p class="result"></p>
+    <p class="moves"></p>
+    <p class="score"></p>
+
+    <button onclick="
+         matchScore.win=0;
+        matchScore.lose=0;
+        matchScore.tie=0;
+        document.querySelector('.score').innerHTML=`win: ${matchScore.win} lose: ${matchScore.lose} tie: ${matchScore.tie}`;
+        ">reset score</button>
+
+    <script src="flie.js">
+       
+
+    </script>
+</body>
+</html>
