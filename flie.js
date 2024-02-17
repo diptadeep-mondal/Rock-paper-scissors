@@ -1,5 +1,11 @@
 const matchScore=JSON.parse(localStorage.getItem('matchScore'));
-
+if(!matchScore){
+    matchScore={
+        win:0,
+        lose:0,
+        tie:0
+    }
+}
        
 let ans;
 function computerMove()
