@@ -1,18 +1,14 @@
-let matchScore=JSON.parse(localStorage.getItem('matchScore'));
-if(!matchScore){
-    matchScore={
+let matchScore= {
         win:0,
         lose:0,
         tie:0
-    }
-}
-       
-
-
+    };
+    
+    //JSON.parse(localStorage.getItem('matchScore'));
 
 let ans;
 function playGame(userMove){
-    const user=Math.random();
+    let user=Math.random();
     if(user<=0.3)
     {
      ans='rock';
@@ -87,7 +83,7 @@ else{
 matchScore.tie++;
 }
 
-localStorage.setItem ('matchScore',JSON.stringify(matchScore));
+//localStorage.setItem ('matchScore',JSON.stringify(matchScore));
 
 document.querySelector('.score').innerHTML=`win: ${matchScore.win} lose: ${matchScore.lose} tie: ${matchScore.tie}`;
 
